@@ -145,6 +145,7 @@ button:hover{
    .title-container div{
        width:100%;
        background-position:cover;
+       background-size:cover;
    }
     .title-container div h1 {
         font-size:4.75rem;
@@ -156,9 +157,18 @@ button:hover{
         flex-direction:column;
         width:100%;
         margin:0 auto;
+        margin-bottom:8%;
     }
     .artist {
-        width:75%;
+        width:70%;
+        font-size:1.1rem;
     }
- 
+    .artist img{
+        width:70%;
+        height:auto;
+        margin-top:10%;
+    }
+    .title-container hr {
+        width:100%;
+    }
 }
