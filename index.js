@@ -232,8 +232,9 @@ console.log(artists[8].name);
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array,index) {
-  array[index];
-  return `the artist at index ${array[index].id} is ${array[index].name}`
+  if(array[index]){
+  return `the artist at index ${array[index].id} is ${array[index].name}`;
+  }
 }  
 
 console.log(getArtistByIndex(artists,0));
@@ -249,7 +250,9 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array){
   const newArr = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i].years >= "1900" && array[i].years <= "2000"){
+    let firstYear = parseInt(array[i].years.split("-")[0].trim(), 10);
+    let secondYear = parseInt(array[i].years.split("-")[0].trim(), 10);
+    if((firstYear >= 1900 && firstYear <= 2000) && (secondYear >= 1900 && secondYear <= 2000)){
       newArr.push(array[i].name);
     }
   }
